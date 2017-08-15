@@ -1,5 +1,5 @@
+const authentication = require('./contollers/authentication');
+
 module.exports = function (app) {
-    app.get('/', function(req,resp,next){
-        resp.send(['new', 'slut', 'baby'])
-    })
-}
+    app.post('/signup', authentication.signup)
+};

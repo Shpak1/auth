@@ -1,12 +1,9 @@
-/**
- * Created by Сергей on 14.08.2017.
- */
-const mongoose = required('mongoose');
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 //Define user model
  const userSchema = Schema({
-     email:{type:String,unique:true},
+     email:{type:String,unique:true, required:true},
      password:String
 });
 
